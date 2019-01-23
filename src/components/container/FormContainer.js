@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input";
+import imgs from "./../../assets/images/mothinglove.jpeg"; //iport方式引入图片可行
 class FormContainer extends Component {
   constructor() {
     super();
@@ -24,6 +25,7 @@ class FormContainer extends Component {
           value={seo_title}
           handleChange={this.handleChange}
         />
+        <img src={imgs} alt=""/>
       </form>
     );
   }
