@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import '../../assets/css/index.css'
+import {
+Button
+} from 'antd';
 const Input = ({ label, text, type, id, value, handleChange }) => (
   <div className="form-group">
     <label htmlFor={label} className="title">{text}</label>
@@ -12,6 +15,7 @@ const Input = ({ label, text, type, id, value, handleChange }) => (
       onChange={handleChange}
       required
     />
+    <Button type='primary'>点击</Button>
   </div>
 );
 Input.propTypes = {

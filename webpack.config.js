@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");// 参照模板生成HTML
 const uglifyjs = require('uglifyjs-webpack-plugin'); //压缩js插件
 module.exports = {
@@ -21,7 +22,12 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|jpeg)$/,
         use: [
-          'url-loader',
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
         ]
       },
       {
@@ -31,6 +37,12 @@ module.exports = {
         ]
       }
     ]
+  },
+  devServer: {
+    open: true,
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
   },
   plugins: [
     new HtmlWebPackPlugin({

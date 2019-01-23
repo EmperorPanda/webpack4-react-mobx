@@ -119,3 +119,20 @@ module.exports = {
   ]
 };
 ~~~
+使用UI框架antd 
+~~~
+npm i antd --save-dev
+~~~
+配置.babelrc 实现antd 按需加载
+~~~
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"],
+    "plugins": [
+        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+    ]
+}
+~~~
+此外还需要使用到babel-plugin-import插件
+~~~
+npm i babel-plugin-import --save-dev
+~~~

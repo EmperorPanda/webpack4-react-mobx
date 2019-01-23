@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack"
   },
   "keywords": [],
@@ -30,5 +30,9 @@
     "uglifyjs-webpack-plugin": "^2.1.1"
   },
   "dependencies": {
+    "antd": "^3.12.4",
+    "babel-plugin-import": "^1.11.0",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3"
   }
 }
